@@ -1,6 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TextInput } from 'react-native';
+import { StyleSheet, Dimensions, Text, View, Image, TextInput } from 'react-native';
 import { colors } from '@material-ui/core';
+import { Colors } from 'react-native/Libraries/NewAppScreen';
 
 const appColors = {
     yellow: "#FCA311",
@@ -12,10 +13,11 @@ const styles = StyleSheet.create({
         paddingVertical: "15%",
         backgroundColor: '#fff',
         alignItems: "center",
+        justifyContent: 'center'
       },
     
     titleView: {
-        padding: 0,
+        paddingBottom: 10,
         alignItems: "center",
         height: 300
     },
@@ -89,11 +91,31 @@ const styles = StyleSheet.create({
         alignItems:'center',
         padding:10,
         borderRadius:30,
+        margin:10
     },
     profileContainer: {
         padding: 50,
         backgroundColor: '#fff',
         alignItems: "center",
+    },
+    input : {
+        backgroundColor : appColors.grey,
+        borderRadius: 14,
+        padding: 8,
+        margin: 5,
+        width: "80%"
+    },
+    walletTicket : {
+        width:Dimensions.get('window').width-14,
+        borderRadius:10,
+        margin:7,
+        backgroundColor:"#fff"
+    },
+    loading: {
+        flex:1,
+        backgroundColor: '#fff',
+        alignItems: "center",
+        justifyContent: 'center'
     }
     
 });
